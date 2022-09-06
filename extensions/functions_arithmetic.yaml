@@ -1087,7 +1087,11 @@ aggregate_functions:
     description: >
       Calculates correlation of two set of values.
       If there is no input, null is returned.
-  
+ impls:
+      - args:
+          - name: rounding
+            options: [ TIE_TO_EVEN, TIE_AWAY_FROM_ZERO, TRUNCATE, CEILING, FLOOR ]
+            required: false 
           - value: fp32
           - value: fp32
         nullability: DECLARED_OUTPUT
